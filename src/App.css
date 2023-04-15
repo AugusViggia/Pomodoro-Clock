@@ -1,38 +1,83 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pomodoroClock{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 3px solid  black;
+  height: 40%;
+  width: 35%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid green;
+}
+
+.counterDiv{
+  display: flex;
+  flex-direction: row;
+  border: 3px solid red;
+  justify-content:center;
+  height: 20%;
+}
+
+.breakDiv{
+  border: 3px solid blue;
+  margin-right: 40px;
+  width: 50%;
+}
+
+.breakController{
+  border: 3px solid black;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.sessionDiv{
+  border: 3px solid yellow;
+  width: 50%;
+}
+
+.sessionController{
+  border: 3px solid black;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.fullClock{
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  border: 3px solid red;
+}
+
+.clock{
+  border: 3px solid orange;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.commands{
+  border: 3px solid purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+}
+
+#reset{
+  margin-left: 5px;
 }
