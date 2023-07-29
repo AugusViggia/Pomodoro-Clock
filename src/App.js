@@ -129,11 +129,11 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <div class="card">
-        <div class="container">
-          <div class="box">
+      <div className="card">
+        <div className="container">
+          <div className="box">
             <div className="title">POMODORO CLOCK</div>
-            <div class="card2">
+            <div className="card2">
               <div className="counterDiv">
                 <div className="breakDiv">
                   <div id="break-label">Break Length</div>

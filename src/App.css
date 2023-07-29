@@ -406,3 +406,25 @@ button:hover .star-6 {
 .card2:active {
   --border-width: 5px;
 }
+
+@media (max-width: 390px) {
+  .card{
+    min-width: 75vw;
+  }
+
+  .box{
+    min-width: 75vw;
+  }
+}
+
+@media (max-width: 380px) {
+  .card {
+    min-width: 75vw;
+    min-height: 40vh;
+  }
+
+  .box {
+    min-width: 75vw;
+    min-height: 40vh;
+  }
+}
