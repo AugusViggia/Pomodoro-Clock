@@ -129,67 +129,184 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <div className="pomodoroClock">
-        <div className="title">POMODORO CLOCK</div>
-        <div className="counterDiv">
-          <div className="breakDiv">
-            <div id="break-label">Break Length</div>
-            <div className="breakController">
-              <div
-                id="break-increment"
-                onClick={handleBreakIncrease}
-                data-value={breakCounter}
-              >
-                +
+      <div class="card">
+        <div class="container">
+          <div class="box">
+            <div className="title">POMODORO CLOCK</div>
+            <div class="card2">
+              <div className="counterDiv">
+                <div className="breakDiv">
+                  <div id="break-label">Break Length</div>
+                  <div className="breakController">
+                    <div
+                      className="breakIncrement"
+                      onClick={handleBreakIncrease}
+                      data-value={breakCounter}
+                    >
+                      +
+                    </div>
+                    <div id="break-length">{breakCounter}</div>
+                    <div
+                      className="breakDecrement"
+                      onClick={handleBreakDecrease}
+                      data-value={breakCounter}
+                    >
+                      -
+                    </div>
+                  </div>
+                </div>
+                <div className="sessionDiv">
+                  <div id="session-label">Session Length</div>
+                  <div className="sessionController">
+                    <div
+                      className="sessionIncrement"
+                      onClick={handleSessionIncrease}
+                      data-value={sessionCounter}
+                    >
+                      +
+                    </div>
+                    <div id="session-length">{sessionCounter}</div>
+                    <div
+                      className="sessionDecrement"
+                      onClick={handleSessionDecrease}
+                      data-value={sessionCounter}
+                    >
+                      -
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div id="break-length">{breakCounter}</div>
-              <div
-                id="break-decrement"
-                onClick={handleBreakDecrease}
-                data-value={breakCounter}
-              >
-                -
+              <div className="fullClock">
+                <div className="clock">
+                  <div id="timer-label">{currentTimer}</div>
+                  <div id="time-left">{convertedTime}</div>
+                </div>
+                <div className="commands">
+                  <button id="start_stop" onClick={handlePlayPause}>
+                    {isPlaying ? "PAUSE" : "PLAY"}
+                    <div className="star-1">
+                      <svg
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 2l2.76 8.39h8.81l-7.11 5.19 2.76 8.39L12 17.32l-7.42 5.25 2.76-8.39L1.43 10.39h8.81z" />
+                      </svg>
+                    </div>
+
+                    <div className="star-2">
+                      <svg
+                        viewBox="0 0 784.11 815.53"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                      </svg>
+                    </div>
+                    <div className="star-3">
+                      <svg
+                        viewBox="0 0 784.11 815.53"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                      </svg>
+                    </div>
+                    <div className="star-4">
+                      <svg
+                        viewBox="0 0 784.11 815.53"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                      </svg>
+                    </div>
+                    <div className="star-5">
+                      <svg
+                        viewBox="0 0 784.11 815.53"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                      </svg>
+                    </div>
+                    <div className="star-6">
+                      <svg
+                        viewBox="0 0 784.11 815.53"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                      </svg>
+                    </div>
+                  </button>
+                  <button id="reset" onClick={handleReset}>
+                    RESET
+                    <div className="star-1">
+                      <svg
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 2l2.76 8.39h8.81l-7.11 5.19 2.76 8.39L12 17.32l-7.42 5.25 2.76-8.39L1.43 10.39h8.81z" />
+                      </svg>
+                    </div>
+                    <div className="star-2">
+                      <svg
+                        viewBox="0 0 784.11 815.53"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                      </svg>
+                    </div>
+                    <div className="star-3">
+                      <svg
+                        viewBox="0 0 784.11 815.53"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                      </svg>
+                    </div>
+                    <div className="star-4">
+                      <svg
+                        viewBox="0 0 784.11 815.53"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                      </svg>
+                    </div>
+                    <div className="star-5">
+                      <svg
+                        viewBox="0 0 784.11 815.53"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                      </svg>
+                    </div>
+                    <div className="star-6">
+                      <svg
+                        viewBox="0 0 784.11 815.53"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="yellow"
+                      >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="sessionDiv">
-            <div id="session-label">Session Length</div>
-            <div className="sessionController">
-              <div
-                id="session-increment"
-                onClick={handleSessionIncrease}
-                data-value={sessionCounter}
-              >
-                +
-              </div>
-              <div id="session-length">{sessionCounter}</div>
-              <div
-                id="session-decrement"
-                onClick={handleSessionDecrease}
-                data-value={sessionCounter}
-              >
-                -
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="fullClock">
-          <div className="clock">
-            <div id="timer-label">{currentTimer}</div>
-            <div id="time-left">{convertedTime}</div>
-          </div>
-          <div className="commands">
-            <div id="start_stop" onClick={handlePlayPause}>
-              {isPlaying ? "PAUSE" : "PLAY"}
-            </div>
-            <div id="reset" onClick={handleReset}>
-              RESET
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default App;
