@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: row;
   padding: 0.5rem;
-  justify-content:center;
+  justify-content:space-around;
   min-height: fit-content;
   color: #C8D2D7;
   font-family: 'Lumanosimo', cursive;
@@ -410,19 +410,19 @@ button:hover .star-6 {
 @media (max-width: 768px) {
   .card{
     min-width: 75vw;
-    min-height: 42vh;
+    min-height: 37vh;
   }
 
   .box{
     min-width: 75vw;
-    min-height: 42vh;
+    min-height: 35vh;
   }
 }
 
 @media (max-width: 380px) {
   .card {
     min-width: 75vw;
-    min-height: 42vh;
+    min-height: 40vh;
   }
 
   .box {
